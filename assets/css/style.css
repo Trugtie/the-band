@@ -1,0 +1,106 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46.5px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  height: 46.5px;
+  display: flex;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+  height: 46.5px;
+  transition: all 0.3s;
+}
+
+.nav li:hover {
+  background-color: #ccc;
+}
+
+.nav li:hover a {
+  color: black;
+}
+
+.nav li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0 24px;
+  font-weight: 500;
+}
+
+.subnav {
+  position: relative;
+}
+.subnav:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown a {
+  font-weight: 400 !important;
+  text-transform: capitalize !important;
+}
+
+.more-nav {
+  position: relative;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  color: white;
+  align-self: center;
+  padding: 0 2rem;
+  line-height: 46.5px !important;
+  transition: all 0.3s;
+}
+
+.search-icon:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+.down-arrow {
+  font-size: 1.5rem;
+  position: absolute;
+  margin-left: 0.5rem;
+}
+
+.slider {
+  margin-top: 46.5px;
+  height: 1500px;
+}
+
+.content {
+}
+
+.footer {
+}
