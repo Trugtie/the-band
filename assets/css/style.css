@@ -18,6 +18,15 @@ html {
   background-color: black;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
+}
+
+.section-black {
+  background-color: black;
+}
+
+.color-white {
+  color: white;
 }
 
 .nav {
@@ -95,12 +104,115 @@ html {
 }
 
 .slider {
+  position: relative;
   margin-top: 46.5px;
-  height: 1500px;
+  padding-top: 50%;
+  background: url(https://images4.alphacoders.com/278/278686.jpg) top center /
+    cover no-repeat;
 }
 
-.content {
+.slider-content {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 32px 16px;
 }
 
+.slider-title {
+  margin-bottom: 16px;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.slider-sub-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 800px;
+  padding: 64px 0px;
+  margin: 0 auto;
+}
+
+.content-title {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem 0px;
+}
+
+.content-subtitle {
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0px;
+  opacity: 0.3;
+}
+
+.about-paraphaph {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 1.5rem 0px;
+  line-height: 1.5;
+}
+
+.about-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-name {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin: 1.5rem 0px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.item-image {
+  width: 60%;
+}
+
+.tour-list {
+  background-color: white;
+}
+
+.tour-month {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+  color: #757575;
+  list-style: none;
+}
+
+.sold-out {
+  margin-left: 16px;
+  padding: 2px 8px;
+  color: white;
+  background-color: #f44336;
+}
+
+.count {
+  padding: 0px 8px;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  float: right;
+}
+.clear-both {
+  clear: both;
+}
 .footer {
 }
