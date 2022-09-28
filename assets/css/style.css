@@ -9,6 +9,56 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-third {
+  width: 33.333%;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -165,6 +215,7 @@ html {
 .about-list {
   display: flex;
   justify-content: space-between;
+  padding: 32px 0px;
 }
 
 .about-item {
@@ -214,5 +265,107 @@ html {
 .clear-both {
   clear: both;
 }
+
+.tour-item {
+  width: 33.333%;
+  padding: 0px 8px;
+  float: left;
+}
+
+.tour-ticket {
+  padding: 32px 0px;
+  margin: 0px -8px 0px;
+}
+
+.tour-ticket::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tour-item img {
+  width: 100%;
+  display: block;
+}
+
+.item-content {
+  color: black;
+  background-color: white;
+  padding: 16px;
+}
+
+.item-title {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.item-date {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.item-text {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.item-btn {
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.item-btn:hover {
+  background-color: rgb(197, 197, 197);
+  color: black;
+  cursor: pointer;
+}
+
+.contact-line {
+  font-size: 18px;
+}
+
+.contact-line i {
+  width: 30px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0px;
+}
+
+.contact-text {
+  flex-basis: 50%;
+}
+
+.contact-form {
+  flex-basis: 50%;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.map img {
+  width: 100%;
+}
+
 .footer {
+  font-size: 15px;
+  text-align: center;
+  color: rgb(73, 73, 73);
+}
+
+.footer i{
+  font-size: 20px;
+  margin-right: 1px;
+  margin-bottom: 15px;
 }
