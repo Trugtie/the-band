@@ -364,8 +364,125 @@ html {
   color: rgb(73, 73, 73);
 }
 
-.footer i{
+.footer i {
   font-size: 20px;
   margin-right: 1px;
   margin-bottom: 15px;
+}
+
+.open{
+  display: flex !important;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all .3s;
+}
+
+.modal-container {
+  width: 900px;
+  min-height: 340px;
+  background-color: white;
+  position: relative;
+  animation: slideDown ease .3s;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.close-btn:hover {
+  background-color: rgb(190, 81, 81);
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 32px 16px;
+  color: white;
+  background-color: #009688;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.modal-title i {
+  margin-right: 16px;
+}
+
+.modal-body {
+  padding: 0px 16px;
+}
+
+.modal-label {
+  margin: 15px 0px 5px;
+  font-size: 15px;
+  display: block;
+}
+
+.modal-label i {
+  width: 20px;
+}
+
+.modal-input {
+  display: block;
+  padding: 9px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.modal-btn {
+  display: block;
+  width: 100%;
+  margin: 16px 0px;
+  padding: 16px;
+  text-align: center;
+  border: none;
+  background-color: #009688;
+  transition: all 0.3s;
+  color: white;
+  font-size: 15px;
+}
+
+.modal-btn:hover {
+  cursor: pointer;
+  background-color: #027267;
+}
+
+.modal-footer {
+  padding: 0px 16px;
+  margin: 15px 0px;
+  text-align: right;
+  font-size: 15px;
+}
+
+.modal-footer a {
+  color: #2196f3;
+}
+
+@keyframes slideDown {
+  from{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
