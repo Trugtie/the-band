@@ -8,6 +8,8 @@
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding,50px);
 }
 
 .text-center {

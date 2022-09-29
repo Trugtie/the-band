@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TheBand</title>
+    <title id="band">TheBand</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -18,10 +18,10 @@
     <div class="main">
       <header class="header">
         <ul class="nav">
-          <li><a href="">home</a></li>
-          <li><a href="">band</a></li>
-          <li><a href="">tour</a></li>
-          <li><a href="">contact</a></li>
+          <li><a href="#home">home</a></li>
+          <li><a href="#theband">band</a></li>
+          <li><a href="#tour">tour</a></li>
+          <li><a href="#contact">contact</a></li>
           <li class="subnav">
             <a class="more-nav" href=""
               >more
@@ -36,7 +36,7 @@
         </ul>
         <i class="search-icon fa-solid fa-magnifying-glass"></i>
       </header>
-      <section class="slider">
+      <section class="slider" id="home">
         <div class="slider-content">
           <h2 class="slider-title">New York</h2>
           <h3 class="slider-sub-title">
@@ -46,7 +46,7 @@
       </section>
       <section class="about">
         <div class="container">
-          <h1 class="content-title">the band</h1>
+          <h1 class="content-title" id="theband">the band</h1>
           <h3 class="content-subtitle">We love music</h3>
           <p class="about-paraphaph">
             We have created a fictional band website. Lorem ipsum dolor sit
@@ -91,7 +91,7 @@
       </section>
       <section class="tour section-black">
         <div class="container">
-          <h1 class="content-title color-white">tour dates</h1>
+          <h1 class="content-title color-white" id="tour">tour dates</h1>
           <h3 class="content-subtitle color-white">
             Remember to book your tickets!
           </h3>
@@ -156,7 +156,7 @@
       </section>
       <section class="contact">
         <div class="container">
-          <h1 class="content-title">contact</h1>
+          <h1 class="content-title" id="contact">contact</h1>
           <h3 class="content-subtitle">Fan? Drop a note!</h3>
           <div class="contact-content">
             <div class="contact-text">
@@ -280,6 +280,13 @@
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
       });
+
+      const headerHeight = document.querySelector(".header").offsetHeight;
+
+      document.documentElement.style.setProperty(
+        "--scroll-padding",
+        headerHeight - 1 + "px"
+      );
     </script>
   </body>
 </html>
