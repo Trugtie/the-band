@@ -9,7 +9,7 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: var(--scroll-padding,50px);
+  scroll-padding-top: var(--scroll-padding, 50px);
 }
 
 .text-center {
@@ -372,7 +372,7 @@ html {
   margin-bottom: 15px;
 }
 
-.open{
+.open {
   display: flex !important;
 }
 
@@ -386,7 +386,7 @@ html {
   right: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .modal-container {
@@ -394,7 +394,7 @@ html {
   min-height: 340px;
   background-color: white;
   position: relative;
-  animation: slideDown ease .3s;
+  animation: slideDown ease 0.3s;
 }
 
 .close-btn {
@@ -478,13 +478,104 @@ html {
   color: #2196f3;
 }
 
+.menu-icon {
+  display: none !important;
+}
+
 @keyframes slideDown {
-  from{
+  from {
     opacity: 0;
     transform: translateY(-100px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 740px) {
+  .header {
+    display: block;
+    overflow: hidden;
+  }
+
+  .dropdown {
+    position: initial;
+    display: none;
+    background-color: rgb(37, 37, 37);
+    color: white;
+  }
+
+  .subnav:hover .dropdown li a {
+    color: white;
+  }
+
+  .dropdown li:hover {
+    background-color: rgb(20, 20, 20);
+  }
+
+  .slider-content {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+
+  .subnav {
+    cursor: pointer;
+  }
+
+  .nav li a {
+    width: 100%;
+    line-height: 46.5px;
+  }
+
+  .subnav {
+    display: block !important;
+  }
+
+  .down-arrow {
+    line-height: 46.5px !important;
+  }
+
+  .nav li:first-child {
+    display: inline-block;
+  }
+
+  .nav li:first-child a {
+    line-height: 46.5px;
+  }
+
+  .subnav li:first-child {
+    display: block;
+  }
+
+  .search-icon {
+    display: none !important;
+  }
+  .menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block !important;
+    font-size: 1.5rem;
+    color: white;
+    align-self: center;
+    padding: 0 2rem;
+    line-height: 46.5px !important;
+    transition: all 0.3s;
+  }
+
+  .menu-icon:hover {
+    background-color: #d4d4d4;
+    color: black;
+    cursor: pointer;
   }
 }

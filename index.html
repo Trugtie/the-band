@@ -23,7 +23,7 @@
           <li><a href="#tour">tour</a></li>
           <li><a href="#contact">contact</a></li>
           <li class="subnav">
-            <a class="more-nav" href=""
+            <a class="more-nav" href="#"
               >more
               <i class="fa-solid fa-sort-down down-arrow"></i>
             </a>
@@ -35,6 +35,7 @@
           </li>
         </ul>
         <i class="search-icon fa-solid fa-magnifying-glass"></i>
+        <i class="menu-icon fa-solid fa-bars"></i>
       </header>
       <section class="slider" id="home">
         <div class="slider-content">
@@ -287,6 +288,41 @@
         "--scroll-padding",
         headerHeight - 1 + "px"
       );
+    </script>
+    <script>
+      const header = document.querySelector(".header");
+      const nav = document.querySelector(".nav");
+      const menuBtn = document.querySelector(".menu-icon");
+      var initHeight = header.clientHeight;
+      const navItems = document.querySelectorAll('.nav li a[href*="#"]');
+
+      menuBtn.onclick = function () {
+        var isClose = header.clientHeight === initHeight;
+        if (isClose) {
+          header.style.height = "auto";
+          nav.style.height = "auto";
+          header.style.overflow = "visible";
+        } else {
+          header.style.height = null;
+          header.style.overflow = "hidden";
+          nav.style.height = null;
+        }
+      };
+
+      for (const item of navItems) {
+        item.onclick = function (e) {
+          var isParentMenu =
+            this.nextElementSibling &&
+            this.nextElementSibling.classList.contains("dropdown");
+          if (isParentMenu) {
+            e.preventDefault();
+          } else {
+            header.style.height = null;
+            nav.style.height = null;
+            header.style.overflow = "hidden";
+          }
+        };
+      }
     </script>
   </body>
 </html>
