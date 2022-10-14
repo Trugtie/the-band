@@ -217,13 +217,14 @@ html {
 .about-list {
   display: flex;
   justify-content: space-between;
-  padding: 32px 0px;
+  padding: 16px 0px 32px;
 }
 
 .about-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 16px;
 }
 
 .item-name {
@@ -272,10 +273,11 @@ html {
   width: 33.333%;
   padding: 0px 8px;
   float: left;
+  margin-top: 16px;
 }
 
 .tour-ticket {
-  padding: 32px 0px;
+  padding: 16px 0px 32px;
   margin: 0px -8px 0px;
 }
 
@@ -501,9 +503,22 @@ html {
 }
 
 @media (max-width: 740px) {
+  .s-full-width {
+    width: 100%;
+  }
+
+  input[type="email"] {
+    margin-top: 8px;
+  }
+
   .header {
     display: block;
     overflow: hidden;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .dropdown {
@@ -577,5 +592,29 @@ html {
     background-color: #d4d4d4;
     color: black;
     cursor: pointer;
+  }
+
+  .about-list {
+    flex-direction: column;
+  }
+
+  .item-image {
+    width: 50%;
+  }
+
+  .tour-item {
+    width: 100%;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-text {
+    margin-bottom: 16px;
+  }
+
+  .item-btn{
+    width: 100%;
   }
 }
